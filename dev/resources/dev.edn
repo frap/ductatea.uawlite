@@ -1,0 +1,2 @@
+{:duct.database/sql
+ {:connection-uri "jdbc:informix-sqli://9.1.1.62:1504/db_cra:informixserver=atea_dev_uccx11_uccx;user=uccxhruser;password=ateasystems0916"}}

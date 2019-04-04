@@ -1,0 +1,18 @@
+{:duct.profile/base
+ {:duct.core/project-ns atea.uawlite
+
+  :duct.router/ataraxy
+  {:routes {[:get "/"] [:atea.uawlite.handler/index]}}
+
+  :atea.uawlite.handler/index
+  {:db #ig/ref :duct.database/sql}
+  }
+
+ :duct.profile/dev   #duct/include "dev"
+ :duct.profile/local #duct/include "local"
+ :duct.profile/prod  {}
+
+ :duct.module/logging {}
+ :duct.module.web/site {}
+ :duct.module/sql {}
+ :duct.module/cljs {:main atea.uawlite.client}}
