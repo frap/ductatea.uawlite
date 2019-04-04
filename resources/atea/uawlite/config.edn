@@ -2,10 +2,12 @@
  {:duct.core/project-ns atea.uawlite
 
   :duct.router/ataraxy
-  {:routes {[:get "/"] [:atea.uawlite.handler/index]}}
+  {:routes {[:get "/"] [:atea.uawlite.handler/index]
+            [:get "/list-stats"] [:atea.uawlite.handler.uccxstats/list]
+            }}
 
-  :atea.uawlite.handler/index
-  {:db #ig/ref :duct.database/sql}
+  :atea.uawlite.handler/index {}
+  :atea.uawlite.handler.uccxstats/list  {:db #ig/ref :duct.database/sql}
   }
 
  :duct.profile/dev   #duct/include "dev"
